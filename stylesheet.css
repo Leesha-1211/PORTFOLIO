@@ -1,0 +1,324 @@
+*
+{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'popins','sans-serif';
+}
+ body{
+   
+    overflow: hidden;
+ }
+ .header{
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+
+ }
+
+ .logo{
+  position: relative;
+  font-size: 60px;
+font-style:normal;
+text-shadow:2px 2px #0ef;
+ color: white;
+ text-decoration: none;
+ font-weight:600;
+ cursor: default;
+ opacity: 0;
+ animation: slideRight 1s ease forwards;
+ }
+
+ .navbar a{
+    display: inline;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font: weight 500px;
+    margin-left: 35px;
+    transition: .3s;
+    opacity:0;
+    animation:slideTop 5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+ }
+
+ .navbar a:hover{
+    color: #0ef;
+ }
+ .home{
+    position:relative;
+    width:100%;
+    justify-content:space-between ;
+    background:black;
+    background-size:cover;
+    background-position:center;
+    height:100vh; 
+    display: flex;
+    align-items:center;
+    padding: 70px 10% 0;
+ }
+.home-content{
+    max-width: 600px;
+    color: white;
+}
+
+.home-content h3{
+    font-size: 32px;
+    font-weight:700px;
+    opacity:0;
+    animation:slideBottom 1s ease forwards;
+    animation-delay: .7s;
+
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom:30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content h3 span{
+    color: #0ef;
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight:700px;
+    margin: -3px 0;
+    opacity: 0;
+   animation: slideRight 1s ease forwards;
+   animation-delay: 1s;
+}
+.home-content p{
+    font-size: 20px;
+    opacity:0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.home-sci a{
+display:inline-flex ;
+justify-content:center ;
+align-items: center;
+width: 40px;
+height: 40px;
+background: transparent;
+border: 2px solid #0ef;
+border-radius: 50%;
+font-size: 20px;
+color: #0ef;
+text-decoration: none ;
+transition: .5s ease;
+opacity:0;
+animation:slideLeft 1s ease forwards;
+animation-delay: calc(.2s * var(--i));
+margin: 30px 15px 30px 0px;
+}
+
+.home-sci a:hover{
+ 
+    background:#0ef;
+    color:black ;
+    box-shadow:0 0 20px #0ef ;
+
+}
+.btn-box {
+
+    display:inline-block;
+    padding: 12px 28px;
+    background:#0ef ;
+    border-radius:40px ;
+    font-size: 16px;
+    color:black;
+    letter-spacing:1px;
+    text-decoration:none ;
+    font-weight:600 ;
+    opacity: 0;
+    animation:slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px black,
+    0 0 25px black
+
+}
+.btn-box:hover{
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef
+}
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-100px);
+        opacity:0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1;
+    }
+
+}
+@keyframes slideLeft{
+    0%{
+        transform: translateX(100px);
+        opacity:0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1;
+    }
+
+}
+@keyframes slideTop{
+    0%{
+        transform: translateX(100px);
+        opacity:0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1;
+    }
+
+}
+@keyframes slideBottom{
+    0%{
+        transform: translateX(-100px);
+        opacity:0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity:1;
+    }
+
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    animation:slideTop 1s ease forwards;
+    
+}
+
+.box{
+    background: url("portfolio_bluebg.jpg");
+    -webkit-background-size: cover;
+     background-size: cover;
+     background-position: center center;
+     height: 360px;
+     width: 360px;
+     box-shadow: -10px 10px 5px 5px #0ef;
+     animation: animate 5s ease-in-out infinite;
+     transition: all 1s ease-in-out;
+}
+
+@keyframes animate {
+    0%{
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50%{
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    
+}
+
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #212121;
+    padding: 4%;
+   
+}
+
+.input-group, .textarea-group
+{
+    padding: 1% 0;
+}
+
+input, textarea
+{
+    color: white;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #757575;
+    padding: 1.5%;
+    font-size: 20px;
+}
+
+input:focus, textarea:focus
+{
+    background-color: transparent;
+    outline: transparent;
+    border-bottom: 2px solid #69f0ae;
+}
+
+input::placeholder, textarea::placeholder
+{
+    color: transparent;
+}
+
+label
+{
+    color: #757575;
+    position: relative;
+    left: 0.5em;
+    top: -2em;
+	cursor: auto;
+    transition: 0.3s ease all;
+}
+
+input:focus ~ label, input:not(:placeholder-shown) ~ label
+{
+    top: -4em;
+    color: #69f0ae;
+    font-size: 15px;
+}
+
+textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label
+{
+    top: -10.5em;
+    color: #69f0ae;
+    font-size: 15px;
+}
+
+.button-div
+{
+    display: flex;
+    justify-content: center;
+}
+
+button
+{
+    padding: 2%;
+    width: 50%;
+    border: 1px solid;
+    border-color: #212121;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 18px;
+    background-color:white
+    color: inherit;
+    box-shadow: 0 0 10px #212121;
+}
+
+button:hover
+{
+    background-color: #424242;
+    color: #69f0ae;
+    cursor: pointer;
+}
+
+
+
+
